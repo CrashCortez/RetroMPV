@@ -30,3 +30,27 @@ wget https://raw.githubusercontent.com/CrashCortez/Gpivideo/master/setup.sh && s
 ## Want to provide feedback?  Found a bug?
 
 * If you have suggestions for improving these control maps, please add your comments or questions.
+
+### FAQ
+Q: My controller is still not working, what can i do.
+A: you can change the even number in you xboxdvrstart.sh
+
+First get your event number from your devices.
+```shell
+cat /proc/bus/input/devices
+```
+Note what the event# is for the controller you want to use.
+
+Then edit your xboxdvrstart.sh
+```shell
+sudo nano /opt/retropie/configs/all/xboxdvrstart.sh
+```
+Change the line 
+```shell
+line 29:     --evdev /dev/input/event0 \
+```
+changeing event0 to the event # you recieved from the Cat Call
+
+for example if your cat call said teh event# is event17 then change it to:
+```shell
+line 29:     --evdev /dev/input/event17 \
