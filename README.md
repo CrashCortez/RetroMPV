@@ -19,7 +19,6 @@ wget -O control_updater_menu.sh https://raw.githubusercontent.com/CrashCortez/Re
 ```
 ## Choose Your Controller type then after you recieved a Success,  Reboot the system from the menu
 
-### Done.
 
 You also need to have xboxdrv installed (if it isn't already).  [See the Guide here](https://sinisterspatula.github.io/RetroflagGpiGuides/Controls_Updater_Menu)
 
@@ -27,6 +26,7 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
 ```shell
 wget https://raw.githubusercontent.com/CrashCortez/Gpivideo/master/setup.sh && sudo chmod a+x setup.sh && sudo ./setup.sh
 ```
+### Done.
 
 ## Want to provide feedback?  Found a bug?
 
