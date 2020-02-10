@@ -1,0 +1,12 @@
+sudo xboxdrv --evdev /dev/input/by-id/usb-DragonRise_Inc._Generic_USB_Joystick-event-joystick \
+    --silent \
+    --force-feedback \
+    --deadzone-trigger 15% \
+    --deadzone 4000 \
+    --mimic-xpad \
+    --dpad-as-button \
+    --trigger-as-button \
+    --no-extra-events \
+    --evdev-absmap ABS_Z=x1,ABS_Y=y1,ABS_RX=x2,ABS_RZ=y2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \\
+    --axismap -Y1=Y1,-Y2=Y2 /
+    --evdev-keymap BTN_THUMB2=a,BTN_THUMB=b,BTN_TOP=x,BTN_TRIGGER=y,BTN_TOP2=lb,BTN_PINKIE=rb,BTN_BASE=lt,BTN_BASE2=rt,BTN_BASE5=tl,BTN_BASE6=tr,BTN_BASE3=back,BTN_BASE4=start"
