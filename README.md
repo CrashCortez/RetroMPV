@@ -45,12 +45,14 @@ Then edit your xboxdvrstart.sh
 ```shell
 sudo nano /opt/retropie/configs/all/xboxdvrstart.sh
 ```
-Change the line 
+Change the event number on 
 ```shell
 line 29:     --evdev /dev/input/event0 \
 ```
-changeing event0 to the event # you recieved from the Cat Call
+Changeing only the number right after event , with the info you recieved from the Cat Call
 
-for example if your cat call said teh event# is event17 then change it to:
+for example if your cat call said the event# is event17 then change it to:
 ```shell
 line 29:     --evdev /dev/input/event17 \
+```
+
