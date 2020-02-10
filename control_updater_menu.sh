@@ -26,24 +26,26 @@ function main_menu() {
             --ok-label OK --cancel-label Exit \
             --menu "What action would you like to perform?" 25 75 20 \
             1 "Update Controls XBOX 360" \
-            2 "Update Controls PS4" \
-            3 "Update Controls GPi" \
-            4 "Update Controls AUTO" \
-            5 "Update Controls TEST" \
-            6 "Update this menu" \
-            7 "System Reboot" \
-            8 "System Shutdown" \
+            2 "Update Controls PS3" \
+            3 "Update Controls PS4" \
+            4 "Update Controls GPi" \
+            5 "Update Controls AUTO" \
+            6 "Update Controls TEST" \
+            7 "Update this menu" \
+            8 "System Reboot" \
+            9 "System Shutdown" \
             2>&1 > /dev/tty)
 
         case "$choice" in
             1) update_controls_xbox_360  ;;
-            2) controls_ps4  ;;
-            3) controls_gpi ;;
-            4) controls_auto ;; 
-            5) controls_test ;;
-            6) update_menu  ;;
-            7) system_reboot  ;;
-            8) system_shutdown  ;;
+            2) controls_ps3  ;;
+            3) controls_ps4  ;;
+            4) controls_gpi ;;
+            5) controls_auto ;; 
+            6) controls_test ;;
+            7) update_menu  ;;
+            8) system_reboot  ;;
+            9) system_shutdown  ;;
             *)  break ;;
         esac
     done
@@ -91,11 +93,35 @@ function controls_ps4() {
         cd
         cd /opt/retropie/configs/all
         sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS4/xboxdrvend.sh
-        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/test/xboxdrvstart.sh
+        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS4/xboxdrvstart.sh
         sudo chmod 644 *.sh
         cd
         cd /opt/retropie/supplementary/xboxdrv/bin
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS4/quit.sh
+        sudo chmod a+x quit.sh
+        echo "---------------"
+        echo "|| Success!  ||"
+        echo "---------------"
+        sleep 5s
+    else
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        echo ".                                      ."
+        echo ".FAILED! File not available or wifi off."
+        echo ".                                      ."
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        sleep 10s
+    fi
+}
+function controls_ps3() {
+    if validate_url https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS3/xboxdrvstart.sh; then
+        cd
+        cd /opt/retropie/configs/all
+        sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS3/xboxdrvend.sh
+        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS3/xboxdrvstart.sh
+        sudo chmod 644 *.sh
+        cd
+        cd /opt/retropie/supplementary/xboxdrv/bin
+        sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS3/quit.sh
         sudo chmod a+x quit.sh
         echo "---------------"
         echo "|| Success!  ||"
