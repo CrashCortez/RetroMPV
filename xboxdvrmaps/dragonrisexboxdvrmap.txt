@@ -1,4 +1,5 @@
-sudo xboxdrv --evdev /dev/input/by-id/usb-DragonRise_Inc._Generic_USB_Joystick-event-joystick \
+basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
+    --evdev /dev/input/by-id/usb-DragonRise_Inc._Generic_USB_Joystick-event-joystick \
     --silent \
     --force-feedback \
     --deadzone-trigger 15% \
