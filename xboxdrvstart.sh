@@ -26,7 +26,7 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 ### Set variables for your joypad and emulator
 ### Basic Configuraions - Standard controller mappings
 basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
-    --evdev $joystick \
+    --evdev /dev/input/event0 \
     --detach-kernel-driver \
     --silent \
     --force-feedback \
@@ -36,10 +36,10 @@ basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --dpad-as-button \
     --trigger-as-button \
     --no-extra-events \
-    --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
-    --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
-    --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
-    --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y"
+    --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_Z=x2 \
+    --evdev-absmap ABS_RZ=y2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
+    --evdev-keymap BTN_A=x,BTN_B=a,BTN_C=b,BTN_X=y,BTN_Y=lb,BTN_Z=rb,BTN_TL=lt,BTN_TR=rt,BTN_SELECT=tl,BTN_START=tr,BTN_TL2=back,BTN_TR2=start,BTN_MODE=guide \
+    --axismap -y1=y1,-y2=y2"
 
 
 ### Extended Configurations
