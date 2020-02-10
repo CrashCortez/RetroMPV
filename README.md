@@ -31,11 +31,13 @@ wget https://raw.githubusercontent.com/CrashCortez/Gpivideo/master/setup.sh && s
 
 * If you have suggestions for improving these control maps, please add your comments or questions.
 
+
+
 FAQ
 ----
 ### Q: My controller is still not working, what can I do?
 
-A: you can change the even number in you xboxdvrstart.sh
+### A: you can change the even number in you xboxdvrstart.sh
 
 First get your event number from your devices.
 ```shell
