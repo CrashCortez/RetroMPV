@@ -26,8 +26,7 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 ### Set variables for your joypad and emulator
 ### Basic Configuraions - Standard controller mappings
 basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
-    --evdev $joystick \
-    --detach-kernel-driver \
+    --evdev /dev/input/by-id/usb-DragonRise_Inc._Generic_USB_Joystick-event-joystick \
     --silent \
     --force-feedback \
     --deadzone-trigger 15% \
@@ -36,10 +35,9 @@ basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --dpad-as-button \
     --trigger-as-button \
     --no-extra-events \
-    --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
-    --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
-    --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
-    --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y"
+    --evdev-absmap ABS_Z=x1,ABS_Y=y1,ABS_RX=x2,ABS_RZ=y2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \\
+    --axismap -Y1=Y1,-Y2=Y2 /
+    --evdev-keymap BTN_THUMB2=a,BTN_THUMB=b,BTN_TOP=x,BTN_TRIGGER=y,BTN_TOP2=lb,BTN_PINKIE=rb,BTN_BASE=lt,BTN_BASE2=rt,BTN_BASE5=tl,BTN_BASE6=tr,BTN_BASE3=back,BTN_BASE4=start"
 
 
 ### Extended Configurations
