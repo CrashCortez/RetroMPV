@@ -1,4 +1,4 @@
-# RetroMPV - Contol MVP with Xboxdvr 
+# RetroMPV - Contol MVP with Xboxdvr from EmulationStation (RetroPie)
 
 ### This is a Test build for Xbox 360. This is Test github to add controller "support" for Playing videos from ES as if they were roms for non-Gpi retropie setups. This is not ready for release. do not try as of 2/7/2020 will update the page once I have tested it on a few pi with different controllers.
 
