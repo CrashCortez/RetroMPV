@@ -9,14 +9,18 @@
 
         cd
         cd /opt/retropie/configs/all
-        sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/xboxdrvend.sh
-        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/xboxdrvstart.sh
-        sudo chmod 644 *.sh
-        sudo chown pi:pi runcommand-on*
+        sudo wget xboxdrvend.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/xboxdrvend.sh
+        sudo wget xboxdrvstart.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/xboxdrvstart.sh
+        sudo wget https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/runcommand-onend.sh
+		sudo wget https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/runcommand-onstart.sh
+		sudo chmod 644 *.sh
+        sudo chown pi:pi *.sh
         cd
         cd /opt/retropie/supplementary/xboxdrv/bin
-        sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/quit.sh
+        sudo wget quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/quit.sh
         sudo chmod a+x quit.sh
+		cd /home/pi/RetroPie/retropiemenu
+		sudo wget https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/control_updater_menu.sh
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
@@ -30,12 +34,9 @@ else
     mkdir /home/pi/RetroPie/retropiemenu/Controllertools
 fi
 
-sudo wget -O control_updater_menu.sh  https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/control_updater_menu.sh && sudo chmod 775 control_updater_menu.sh
-
 # Update RetroPie gamelist.xml to add new entry
-cd /home/pi/RetroPie/retropiemenu/icons
-sudo wget -O https://github.com/CrashCortez/RetroMPV/master/controllertools.png
-cd
+#cd /home/pi/RetroPie/retropiemenu/icons
+#sudo wget -nd -H -p -A https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/controllertools.png
 
 cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
 cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
