@@ -35,7 +35,7 @@ First, we need to make sure xboxdrv is installed. This can be done from the 'Ret
 You Can also enter teh setup via terminal.
 
 ```shell
- sudo ./RetroPie-Setup/retropie_setup.sh.sh
+ sudo ./RetroPie-Setup/retropie_setup.sh
 ```
 
 ### You will also need my [Gpivideo](https://github.com/CrashCortez/Gpivideo) setup installed you can install it with the following (it will reboot after install):
