@@ -10,6 +10,7 @@ These xboxdrv controller scripts greatly enhance the capabilities of your RetroP
 # To migrate to or to install the new framework:
 
 ## Install Script
+script 1 is trash.
 ```shell
 wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install.sh && sudo chmod 777 install.sh && sudo ./install.sh
 ```
