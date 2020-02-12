@@ -25,11 +25,11 @@ Choose Your Controller type then after you recieved a Success,  Reboot the syste
 
 ## You will need to have xboxdrv installed (if it isn't already). 
 
-First, we need to make sure xboxdrv is installed. This can be done from the 'RetroPie Setup' listing in the 'RetroPie' menu of EmulationStation. once in navigate to 'Manage Packages' -> 'Driver Packages' -> 'xboxdrv - XBox / XBox360 gamepad driver'-> install from 'source'. you are done you do not need to enable it.
+First, we need to make sure xboxdrv is installed. This can be done from the terminal or the Pi itself, from the 'RetroPie Setup' listing in the 'RetroPie' menu of EmulationStation. Now select 'Manage Packages' -> 'Driver Packages' -> 'xboxdrv - XBox / XBox360 gamepad driver' -> Install from 'source'. You're done you do not need to enable it, It just needs to be installed.
 
 [See the Guide here](https://sinisterspatula.github.io/RetroflagGpiGuides/Controls_Updater_Menu)
 
-You Can also enter the setup via terminal.
+You can also enter the setup via terminal.
 ```shell
  sudo ./RetroPie-Setup/retropie_setup.sh
 ```
