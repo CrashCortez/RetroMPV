@@ -32,7 +32,7 @@ fi
 
 cd
 sudo mkdir home/pi/RetroPie/retropiemenu/Controllertools
-cd RetroPie/retropiemeu/Controllertools
+cd RetroPie/retropiemenu/Controllertools
 sudo wget -O https://github.com/CrashCortez/RetroMPV/blob/master/control_updater_menu.sh
 sudo chmod 777 control_updater_menu.sh
 cd 
