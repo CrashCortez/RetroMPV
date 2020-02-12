@@ -10,17 +10,14 @@ These xboxdrv controller scripts greatly enhance the capabilities of your RetroP
 # To migrate to or to install the new framework:
 
 ## Install Script
-
 ```shell
 wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install.sh && sudo chmod 777 install.sh && sudo ./install.sh
 ```
 or 
-
 ```shell
 wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install2.sh && sudo chmod a+x install2.sh && sudo ./install2.sh
 ```
 ## Then run this command
-
 ```shell
  sudo /home/pi/RetroPie/retropiemenu/Controllertools/control_updater_menu.sh
 ```
@@ -32,8 +29,7 @@ First, we need to make sure xboxdrv is installed. This can be done from the 'Ret
 
 [See the Guide here](https://sinisterspatula.github.io/RetroflagGpiGuides/Controls_Updater_Menu)
 
-You Can also enter teh setup via terminal.
-
+You Can also enter the setup via terminal.
 ```shell
  sudo ./RetroPie-Setup/retropie_setup.sh
 ```
