@@ -30,14 +30,9 @@ else
     mkdir /home/pi/RetroPie/retropiemenu/Controllertools
 fi
 
-cd /home/pi/RetroPie/retropiemenu/Controllertools
-sudo wget -nd -H -p -A controllertools.png https://github.com/CrashCortez/RetroMPV/master/controllertools.png
-sudo chmod 777 control_updater_menu.sh
-cd 
-
 # Update RetroPie gamelist.xml to add new entry
 cd /home/pi/RetroPie/retropiemenu/icons
-sudo wget -O https://github.com/CrashCortez/RetroMPV/blob/master/controllertools.png
+sudo wget -O https://github.com/CrashCortez/RetroMPV/master/controllertools.png
 cd
 
 cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
