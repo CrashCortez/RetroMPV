@@ -27,12 +27,10 @@
 if [[ -d "/home/pi/RetroPie/retropiemenu/Controllertolls" ]]; then
 echo "exists" > /dev/null
 else
-    mkdir /home/pi/RetroPie/retropiemenu/Controllertolls
+    mkdir /home/pi/RetroPie/retropiemenu/Controllertools
 fi
 
-cd
-sudo mkdir home/pi/RetroPie/retropiemenu/Controllertools
-cd RetroPie/retropiemenu/Controllertools
+cd /home/pi/RetroPie/retropiemenu/Controllertools
 sudo wget -O https://github.com/CrashCortez/RetroMPV/blob/master/control_updater_menu.sh
 sudo chmod 777 control_updater_menu.sh
 cd 
