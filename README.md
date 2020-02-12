@@ -26,9 +26,20 @@ wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install2.s
 ```
 Choose Your Controller type then after you recieved a Success,  Reboot the system from the menu
 
-## You will need to have xboxdrv installed (if it isn't already).  [See the Guide here](https://sinisterspatula.github.io/RetroflagGpiGuides/Controls_Updater_Menu)
+## You will need to have xboxdrv installed (if it isn't already). 
+
+First, we need to make sure xboxdrv is installed. This can be done from the 'RetroPie Setup' listing in the 'RetroPie' menu of EmulationStation. once in navigate to 'Manage Packages' -> 'Driver Packages' -> 'xboxdrv - XBox / XBox360 gamepad driver'-> install from 'source'. you are done you do not need to enable it.
+
+[See the Guide here](https://sinisterspatula.github.io/RetroflagGpiGuides/Controls_Updater_Menu)
+
+You Can also enter teh setup via terminal.
+
+```shell
+ sudo ./RetroPie-Setup/retropie_setup.sh.sh
+```
 
 ### You will also need my [Gpivideo](https://github.com/CrashCortez/Gpivideo) setup installed you can install it with the following (it will reboot after install):
+
 ```shell
 wget https://raw.githubusercontent.com/CrashCortez/Gpivideo/master/setup.sh && sudo chmod a+x setup.sh && sudo ./setup.sh
 ```
