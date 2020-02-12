@@ -30,6 +30,8 @@ else
     mkdir /home/pi/RetroPie/retropiemenu/Controllertools
 fi
 
+sudo wget -O control_updater_menu.sh  https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/control_updater_menu.sh && sudo chmod 775 control_updater_menu.sh
+
 # Update RetroPie gamelist.xml to add new entry
 cd /home/pi/RetroPie/retropiemenu/icons
 sudo wget -O https://github.com/CrashCortez/RetroMPV/master/controllertools.png
