@@ -1,5 +1,8 @@
 # RetroMPV - Contol MVP with Xboxdvr from EmulationStation (RetroPie)
 
+# Do not use yet
+-------
+
 ### This is a Test build for Xbox 360. This is Test github to add controller "support" for Playing videos from ES as if they were roms for non-Gpi retropie setups. This is not ready for release. do not try as of 2/7/2020 will update the page once I have tested it on a few pi with different controllers.
 
 These xboxdrv controller scripts greatly enhance the capabilities of your RetroPie. They can provide many virtual buttons using a button as a modifier. It also helps by mapping controls to keyboard keys for emulators that lack the ability to interface with the RetroPie controls (some of the standalone non-libretro cores and programs).
@@ -11,7 +14,11 @@ These xboxdrv controller scripts greatly enhance the capabilities of your RetroP
 ```shell
 wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install.sh && sudo chmod 777 install.sh && sudo ./install.sh
 ```
+or 
 
+```shell
+wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install2.sh && sudo chmod a+x install2.sh && sudo ./install2.sh
+```
 ## Then run this command
 
 ```shell
