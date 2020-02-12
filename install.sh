@@ -31,7 +31,7 @@ else
 fi
 
 cd
-sudo mkdir home/pi/RetroPie/retropimenu/Controllertools
+sudo mkdir home/pi/RetroPie/retropiemenu/Controllertools
 cd RetroPie/retropiemeu/Controllertools
 sudo wget -O https://github.com/CrashCortez/RetroMPV/blob/master/control_updater_menu.sh
 sudo chmod 777 control_updater_menu.sh
