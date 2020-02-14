@@ -75,3 +75,5 @@ for example if your cat call said the event# is event17 then change it to:
 line 29:     --evdev /dev/input/event17 \
 ```
 
+| [YouTube](https://www.youtube.com/channel/UCwnTzGTRsNpen-2Nz38yGAQ) | [Facebook](https://www.facebook.com/crash.cortez.75) | [Twitter](https://twitter.com/CrashGaming14) |
+| --- | --- | --- |
