@@ -12,6 +12,7 @@
     echo "------------------------"
 	get clone https://github.com/CrashCortez/RetroMPV.git
 	clear	
+
 # Move files to proper directory
 
     echo "--------------------"
@@ -37,14 +38,14 @@
 	sudo cp control_updater_menu.sh /home/pi/RetroPie/retropiemenu/Controllertools
 	sudo cp controllertools.png /home/pi/RetroPie/retropiemenu/icons
 	cd
-    echo "---------------------------"
-    echo "|| Adding to Game list!  ||"
-    echo "---------------------------"
-    sleep 5s
-
 
 # Update RetroPie gamelist.xml to add new entry
-
+   
+    echo "---------------------------"
+    echo "|| Adding to Gamelist!  ||"
+    echo "---------------------------"
+    sleep 5s
+    
 sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
 sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
 
@@ -63,20 +64,6 @@ else
   echo "		<playcount>1</playcount>" >> /tmp/templist.xml
   echo "		<lastplayed></lastplayed>" >> /tmp/templist.xml
   echo "	</game>" >> /tmp/templist.xml
-  echo "</gameList>" >> /tmp/templist.xml
-  sudo cp /tmp/templist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
-fi
-
-sud ocp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
-sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
-
-cat /tmp/gamelist.xml |grep -v "</gameList>" > /tmp/templist.xml
-
-ifexist=`cat /tmp/templist.xml |grep "Controllertools/control_update_menu.sh" |wc -l`
-if [[ ${ifexist} > 0 ]]; then
-  echo "already in gamelist.xml" > /tmp/exists
-else
-
   echo "	<game>" >> /tmp/templist.xml
   echo "		<path>./Controllertools/controler_update_menu.sh</path>" >> /tmp/templist.xml
   echo "		<name>Controller Tools Menu</name>" >> /tmp/templist.xml
@@ -87,6 +74,10 @@ else
   echo "	</game>" >> /tmp/templist.xml
   echo "</gameList>" >> /tmp/templist.xml
   sudo cp /tmp/templist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+fi
+
+sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
+sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
 
 fi
   
