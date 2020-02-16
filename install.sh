@@ -35,8 +35,8 @@
 		else
 		sudo mkdir /home/pi/RetroPie/retropiemenu/Controllertools
 	fi
-	sudo cp control_updater_menu.sh /home/pi/RetroPie/retropiemenu/Controllertools
-	sudo cp controllertools.png /home/pi/RetroPie/retropiemenu/icons
+	sudo cp /home/pi/RetroMPV/control_updater_menu.sh /home/pi/RetroPie/retropiemenu/Controllertools
+	sudo cp /home/pi/RetroMPV/controllertools.png /home/pi/RetroPie/retropiemenu/icons
 	cd
 
 # Update RetroPie gamelist.xml to add new entry
