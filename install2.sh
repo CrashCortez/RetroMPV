@@ -7,39 +7,46 @@
 
 # Download Scripts
 
-        get clone https://github.com/CrashCortez/RetroMPV.git
-		
+    echo "------------------------"
+    echo "|| Cloning RetroMPV!  ||"
+    echo "------------------------"
+	get clone https://github.com/CrashCortez/RetroMPV.git
+	clear	
 # Move files to proper directory
 
-	cd RetroMPV
+    echo "--------------------"
+    echo "|| Moving Files!  ||"
+    echo "--------------------"
+    sleep 5s
+    cd RetroMPV
 	sudo chmod a+x *.sh
 	sudo chown pi:pi *.sh
-	cp xboxdrvend.sh /opt/retropie/configs/all
-	cp xboxdrvstart.sh /opt/retropie/configs/all
-	cp runcommand-onend.sh /opt/retropie/configs/all
-	cp runcommand-onstart.sh /opt/retropie/configs/all
+	sudo cp xboxdrvend.sh /opt/retropie/configs/all
+	sudo cp xboxdrvstart.sh /opt/retropie/configs/all
+	sudo cp runcommand-onend.sh /opt/retropie/configs/all
+	sudo cp runcommand-onstart.sh /opt/retropie/configs/all
 	cd
 	cd RetroMPV
-	cp quit.sh /opt/retropie/supplementary/xboxdrv/bin
+	sudo cp quit.sh /opt/retropie/supplementary/xboxdrv/bin
 	clear
 	if [[ -d "/home/pi/RetroPie/retropiemenu/Controllertools" ]]; then
 		echo "exists" > /dev/null
 		else
 		sudo mkdir /home/pi/RetroPie/retropiemenu/Controllertools
 	fi
-	cp control_updater_menu.sh /home/pi/RetroPie/retropiemenu/Controllertools
-	cp controllertools.png /home/pi/RetroPie/retropiemenu/icons
+	sudo cp control_updater_menu.sh /home/pi/RetroPie/retropiemenu/Controllertools
+	sudo cp controllertools.png /home/pi/RetroPie/retropiemenu/icons
 	cd
-	#echo "---------------"
-    #echo "|| Success!  ||"
-    #echo "---------------"
-    #sleep 5s
+    echo "---------------------------"
+    echo "|| Adding to Game list!  ||"
+    echo "---------------------------"
+    sleep 5s
 
 
 # Update RetroPie gamelist.xml to add new entry
 
-cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
-cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
+sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
+sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
 
 cat /tmp/gamelist.xml |grep -v "</gameList>" > /tmp/templist.xml
 
@@ -57,11 +64,11 @@ else
   echo "		<lastplayed></lastplayed>" >> /tmp/templist.xml
   echo "	</game>" >> /tmp/templist.xml
   echo "</gameList>" >> /tmp/templist.xml
-  cp /tmp/templist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+  sudo cp /tmp/templist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
 fi
 
-cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
-cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
+sud ocp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
+sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
 
 cat /tmp/gamelist.xml |grep -v "</gameList>" > /tmp/templist.xml
 
@@ -79,7 +86,7 @@ else
   echo "		<lastplayed></lastplayed>" >> /tmp/templist.xml
   echo "	</game>" >> /tmp/templist.xml
   echo "</gameList>" >> /tmp/templist.xml
-  cp /tmp/templist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+  sudo cp /tmp/templist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
 
 fi
   
