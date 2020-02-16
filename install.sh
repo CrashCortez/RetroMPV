@@ -65,7 +65,7 @@ else
   echo "		<lastplayed></lastplayed>" >> /tmp/templist.xml
   echo "	</game>" >> /tmp/templist.xml
   echo "	<game>" >> /tmp/templist.xml
-  echo "		<path>./Controllertools/controler_update_menu.sh</path>" >> /tmp/templist.xml
+  echo "		<path>./Controllertools/controller_update_menu.sh</path>" >> /tmp/templist.xml
   echo "		<name>Controller Tools Menu</name>" >> /tmp/templist.xml
   echo "		<desc>Controller Tools Menu.</desc>" >> /tmp/templist.xml
   echo "		<image>./icons/controllertools.png</image>" >> /tmp/templist.xml
