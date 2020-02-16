@@ -79,8 +79,6 @@ fi
 sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml.bkp
 sudo cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml /tmp
 
-fi
-  
   clear
   echo "---------------"
   echo "|| Success!  ||"
