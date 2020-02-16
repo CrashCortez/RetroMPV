@@ -12,7 +12,7 @@ These xboxdrv controller scripts greatly enhance the capabilities of your RetroP
 ## Install Script
 
 ```shell
-wget -O https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install.sh && sudo chmod a+x install.sh && sudo ./install.sh
+wget https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/install.sh && sudo chmod a+x install.sh && sudo ./install.sh
 ```
 ## Then run this command
 ```shell
