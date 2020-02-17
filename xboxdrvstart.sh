@@ -14,7 +14,7 @@ echo "3 is "$3 >> /dev/shm/runcommand.log
 #echo $4 >> /dev/shm/runcommand.log
 
 ## Find the Retroflag Joystick name
-joystick=`find /dev/input/by-id/ -name "*event-joystick*"`
+joystick="8Bitdo SN30 Pro"
 echo "Detected joystick as: "$joystick >> /dev/shm/runcommand.log
 
 ### The FUN begins
@@ -26,7 +26,7 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 ### Set variables for your joypad and emulator
 ### Basic Configuraions - Standard controller mappings
 basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
-    --evdev $joystick \
+    --evdev /dev/input/event0 \
     --detach-kernel-driver \
     --silent \
     --force-feedback \
@@ -37,7 +37,7 @@ basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --trigger-as-button \
     --no-extra-events \
     --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
-    --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
+    --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TL=du,BTN_TR=dd,BTN_TL2=dl,BTN_TR2=dr \
     --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
     --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y"
 
