@@ -252,7 +252,7 @@ function system_reboot() {
 function update_menu() {
     if validate_url https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/control_updater_menu.sh; then
         sudo mkdir -p ~/RetroPie/retropiemenu/Controllertools
-        sudo rm -R /home/pi/RetroMPV
+        sudo rm RetroMPV
         git clone https://github.com/CrashCortez/RetroMPV.git
         sudo chown pi:pi -R RetroMPV
 	cd
