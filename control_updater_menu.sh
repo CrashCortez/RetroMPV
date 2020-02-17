@@ -75,6 +75,7 @@ function update_controls_xbox_360() {
         cd /opt/retropie/supplementary/xboxdrv/bin
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/quit.sh
         sudo chmod a+x quit.sh
+        sudo cp /home/pi/RetroMPV/xboxtools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.png
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
@@ -99,6 +100,7 @@ function controls_ps4() {
         cd /opt/retropie/supplementary/xboxdrv/bin
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS4/quit.sh
         sudo chmod a+x quit.sh
+        sudo cp /home/pi/RetroMPV/ps4tools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.png
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
@@ -123,6 +125,7 @@ function controls_ps3() {
         cd /opt/retropie/supplementary/xboxdrv/bin
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS3/quit.sh
         sudo chmod a+x quit.sh
+        sudo cp /home/pi/RetroMPV/ps3tools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.png
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
@@ -148,7 +151,8 @@ function controls_gpi() {
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/GPi/quit.sh
         sudo chmod a+x quit.sh
         cd
-        sudo cp /home/pi/RetroMPV/gpitools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.pngecho "---------------"
+        sudo cp /home/pi/RetroMPV/gpitools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.png
+        echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
         sleep 5s
@@ -172,6 +176,7 @@ function controls_auto() {
         cd /opt/retropie/supplementary/xboxdrv/bin
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/GPi/quit.sh
         sudo chmod a+x quit.sh
+        sudo cp /home/pi/RetroMPV/xboxtools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.png
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
