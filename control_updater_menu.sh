@@ -231,8 +231,10 @@ function update_menu() {
         sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/master/control_updater_menu.sh
         sudo chmod 777 control_updater_menu.sh
         sudo chmod a+x *.sh
-        cd ..
-        sudo rm control_updater_menu.sh
+        cd 
+        sudo rm -R RetroMPV
+        git clone https://github.com/CrashCortez/RetroMPV.git
+        sudo chown pi:pi -R RetroMPV
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
