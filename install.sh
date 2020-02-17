@@ -11,6 +11,7 @@
     echo "|| Cloning RetroMPV!  ||"
     echo "------------------------"
 	get clone https://github.com/CrashCortez/RetroMPV.git
+	sudo chown pi:pi -R RetroMPV
 	clear	
 
 # Move files to proper directory
