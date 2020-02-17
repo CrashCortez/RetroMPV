@@ -29,11 +29,12 @@ function main_menu() {
             2 "Update Controls PS3" \
             3 "Update Controls PS4" \
             4 "Update Controls GPi" \
-            5 "Update Controls AUTO" \
-            6 "Update Controls TEST" \
-            7 "Update this menu" \
-            8 "System Reboot" \
-            9 "System Shutdown" \
+            5 "Update Controls SN30" \
+	    6 "Update Controls AUTO" \
+            7 "Update Controls TEST" \
+            8 "Update this menu" \
+            9 "System Reboot" \
+            10 "System Shutdown" \
             2>&1 > /dev/tty)
 
         case "$choice" in
@@ -41,11 +42,12 @@ function main_menu() {
             2) controls_ps3  ;;
             3) controls_ps4  ;;
             4) controls_gpi ;;
-            5) controls_auto ;; 
-            6) controls_test ;;
-            7) update_menu  ;;
-            8) system_reboot  ;;
-            9) system_shutdown  ;;
+	    5) controls_sn30 ;;
+            6) controls_auto ;; 
+            7) controls_test ;;
+            8) update_menu  ;;
+            9) system_reboot  ;;
+            10) system_shutdown  ;;
             *)  break ;;
         esac
     done
@@ -123,6 +125,33 @@ function controls_ps3() {
         cd /opt/retropie/supplementary/xboxdrv/bin
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/PS3/quit.sh
         sudo chmod a+x quit.sh
+        echo "---------------"
+        echo "|| Success!  ||"
+        echo "---------------"
+        sleep 5s
+    else
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        echo ".                                      ."
+        echo ".FAILED! File not available or wifi off."
+        echo ".                                      ."
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        sleep 10s
+    fi
+}
+function controls_sn30() {
+    if validate_url https://raw.githubusercontent.com/CrashCortez/RetroMPV/sn30/xboxdrvstart.sh; then
+        cd
+        cd /opt/retropie/configs/all
+        sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/sn30/xboxdrvend.sh
+        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/GPi/xboxdrvstart.sh
+        sudo chmod 644 *.sh
+        cd
+        cd /opt/retropie/supplementary/xboxdrv/bin
+        sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/sn30/quit.sh
+        sudo chmod a+x quit.sh
+        cd
+        cd /home/pi/RetroPie/retropiemenu/icons
+        sudo cp /home/pi/RetroMPV/8bitdotools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.png
         echo "---------------"
         echo "|| Success!  ||"
         echo "---------------"
