@@ -148,7 +148,6 @@ function controls_gpi() {
         sudo wget -O quit.sh https://raw.githubusercontent.com/CrashCortez/RetroMPV/GPi/quit.sh
         sudo chmod a+x quit.sh
         cd
-        cd /home/pi/RetroPie/retropiemenu/icons
         sudo cp /home/pi/RetroMPV/gpitools.png /home/pi/RetroPie/retropiemenu/icons/controllertools.pngecho "---------------"
         echo "|| Success!  ||"
         echo "---------------"
