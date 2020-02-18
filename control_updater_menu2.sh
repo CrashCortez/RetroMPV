@@ -11,7 +11,6 @@
 #==============================================================================
 export NCURSES_NO_UTF8_ACS=1
 #IFS=';'
-
 #  Welcome
 # dialog --backtitle "Controls MENU" --title "The Controls Menu Utility" \
 #   --yesno "\nDo you want to proceed?" \
@@ -19,12 +18,14 @@ export NCURSES_NO_UTF8_ACS=1
 #    || exit
 
 function main_menu() {
+
     local choice
 
     while true; do
         choice=$(dialog --backtitle "$BACKTITLE" --title " MAIN MENU " \
             --ok-label OK --cancel-label Exit \
             --menu "What action would you like to perform?" 25 75 20 \
+
             1 "Update Controls XBOX 360" \
             2 "Controller Type" \
             3 "Update Controls PS4" \
