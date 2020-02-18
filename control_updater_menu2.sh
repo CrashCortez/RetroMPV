@@ -66,7 +66,7 @@ function gui_controllertools() {
             3 "PS4"
             4 "GPi"
             5 "SN30"
-	        6 "AUTO"
+	    6 "AUTO"
             7 "TEST"
         )
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
