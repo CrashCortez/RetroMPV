@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 #=============================================================================
 #title:         menu.sh
 #description:   Menu which allows multiple items to be selected, for the Controls for RetroPie
@@ -12,11 +12,11 @@
 export NCURSES_NO_UTF8_ACS=1
 #IFS=';'
 
-# Welcome
- #dialog --backtitle "Controls MENU" --title "The Controls Menu Utility" \
- #   --yesno "\nDo you want to proceed?" \
- #   28 110 2>&1 > /dev/tty \
- #   || exit
+#  Welcome
+# dialog --backtitle "Controls MENU" --title "The Controls Menu Utility" \
+#   --yesno "\nDo you want to proceed?" \
+#    28 110 2>&1 > /dev/tty \
+#    || exit
 
 function main_menu() {
     local choice
@@ -26,7 +26,7 @@ function main_menu() {
             --ok-label OK --cancel-label Exit \
             --menu "What action would you like to perform?" 25 75 20 \
             1 "Update Controls XBOX 360" \
-            2 "Controller Tools" \
+            2 "Controller Type" \
             3 "Update Controls PS4" \
             4 "Update this menu" \
             5 "System Reboot" \
