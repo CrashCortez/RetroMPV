@@ -5,7 +5,7 @@
 #description:   Menu which allows multiple items to be selected, for the Controls for RetroPie
 #author:        Crash
 #created:       June 24 2019
-#updated:       N/A
+#updated:       Feb 18 2020
 #version:       1.0
 #usage:         ./menu.sh
 #==============================================================================
